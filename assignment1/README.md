@@ -10,7 +10,8 @@ Haversine "a" term computes the central angle between points on a sphere using s
 
 $$
 a = \sin^2\!\left(\frac{\Delta \phi}{2}\right)
-+ \cos(\phi_1)\cos(\phi_2)
++ 
+\cos(\phi_1)\cos(\phi_2)
 \sin^2\!\left(\frac{\Delta \lambda}{2}\right)
 $$
 
