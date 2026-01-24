@@ -7,6 +7,7 @@ LaTeX generated from ChatGPT:
 Prompt: "Give me the LaTeX snippet for the Haversine Formula to calculate GPS coordinate distance. I am including this formula in a README.md file"
 
 Haversine "a" term computes the central angle between points on a sphere using spherical trigonometry. 
+
 $$
 a = \sin^2\!\left(\frac{\Delta \phi}{2}\right)
 + \cos(\phi_1)\cos(\phi_2)
@@ -28,6 +29,18 @@ R = 6371\ \text{km} \quad \text{(or } 3959\ \text{miles)}
 $$
 
 Quick Euclidean approximations assume 111.19 km for one degree of latitude. These approximations are accurate for small distances under 20 km
+
+$$
+d = 2R \arcsin\!\left(
+\sqrt{
+\sin^2\!\left(\frac{\Delta \phi}{2}\right)
++
+\cos(\varphi_1)\cos(\varphi_2)
+\sin^2\!\left(\frac{\Delta \lambda}{2}\right)
+}
+\right)
+$$
+
 
 
 
