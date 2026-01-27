@@ -9,10 +9,10 @@ Prompt: "Give me the LaTeX snippet for the Haversine Formula to calculate GPS co
 Haversine "a" term computes the central angle between points on a sphere using spherical trigonometry. 
 
 $$
-a = \sin^2\!\left(\frac{\Delta \phi}{2}\right)
+a = \sin^2\left(\frac{\Delta \phi}{2}\right)
 + 
 \cos(\phi_1)\cos(\phi_2)
-\sin^2\!\left(\frac{\Delta \lambda}{2}\right)
+\sin^2\left(\frac{\Delta \lambda}{2}\right)
 $$
 
 Distance formula converts central angle into arc length along the Earth's surface.
