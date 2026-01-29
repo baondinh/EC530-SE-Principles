@@ -7,6 +7,8 @@ Related functions stored in geo_functions.py
 CSV taken from Boston 311 Service Request Historical Data
 https://data.boston.gov/dataset/311-service-requests
 TODO: Provided CSVs store latitude/longitude as floats, but need to introduce datatype checking and valid CSV formatting
+
+Good practice: Use venv to also help generate a requirements.txt file with pip freeze
 """
 
 import sys 
@@ -35,7 +37,7 @@ def main():
     # 2) Get random points of data 
     try: 
         # Randomly sample rows of data
-        sampled1 = df.sample(n=10, random_state=None)
+        sampled1 = df.sample(n=1, random_state=None)
         sampled2 = df.sample(n=10, random_state=None)
 
         # Extract points as tuples
@@ -50,17 +52,20 @@ def main():
         # print("Point 1:", p1)
         # print("Point 2:", p2)
 
-        print(points1)
-        print(points2)
+        # print(points1)
+        # print(points2)
         logger.info("Successfully sampled random points of data")
     except Exception as e: 
         logger.error(f"Unable to create random arrays of geo coordinates - {e}")
 
     # 3) For each point in first array, find closest point in second array using Haversine distance
     try: 
-        print("potato")
+        matches = match_closest(points1, points2)
+        for sp, tp, dist in matches:
+            print(f"Closest point to {sp} is {tp} at {dist:.2f} meters")
+        logger.info("Successfully found closest point from first array within second array")
     except Exception as e: 
-        logger.error(f"asd;flkasjd;flkajs;dflkj")
+        logger.error(f"Unable to calculate closest point - {e}")
 
 if __name__ == "__main__": 
     main()
