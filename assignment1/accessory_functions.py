@@ -30,5 +30,6 @@ def create_logger(script_folder: str | Path) -> logging.Logger:
 
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
+    logger.addHandler(file_handler)
 
     return logger
